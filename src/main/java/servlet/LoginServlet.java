@@ -3,6 +3,8 @@ package servlet;
 
 import com.google.gson.Gson;
 import javaClass.User;
+import toolClass.CheckUser;
+import toolClass.ErrorClass;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,10 +34,12 @@ public class LoginServlet extends HttpServlet {
         Gson gson = new Gson();
         User user = gson.fromJson(jsonString,User.class);
         System.out.println(user.getName());
+        CheckUser checkUser = new CheckUser();
+        ErrorClass errorClass = checkUser.checkForLogin(user);
 
         response.setContentType("text/html;charset=utf-8");
         PrintWriter writer = response.getWriter();
-        writer.println(jsonString);
+        writer.println(gson.toJson(errorClass));
 
     }
 

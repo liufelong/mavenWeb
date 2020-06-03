@@ -1,5 +1,9 @@
 package servlet;
 
+import com.google.gson.Gson;
+import javaClass.User;
+import toolClass.ErrorClass;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,14 +21,17 @@ public class RegsiterServlet extends HttpServlet {
             builder.append(line);
         }
         String jsonString = builder.toString();
-
         System.out.println(jsonString);
 
+        Gson gson = new Gson();
+        User user = gson.fromJson(jsonString,User.class);
+
+        ErrorClass errorClass = user.checkForRigist();
 
         response.setContentType("text/html;charset=utf-8");
         PrintWriter writer = response.getWriter();
 //        Writer writer = response.getWriter();
-        writer.println(jsonString);
+        writer.println(gson.toJson(errorClass));
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
