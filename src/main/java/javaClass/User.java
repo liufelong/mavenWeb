@@ -24,7 +24,7 @@ public class User {
     public void insertUser () {
         String sql = "insert into USERS values(null,?,?,null)";
         try (
-                PreparedStatement statement = new JDBCConnection().getConnection().prepareStatement(sql);
+                PreparedStatement statement = JDBCConnection.getJDConnection().getConnection().prepareStatement(sql);
                 ) {
                 statement.setString(1,this.name);
                 statement.setString(2,this.password);

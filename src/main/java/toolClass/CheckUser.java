@@ -13,7 +13,7 @@ public class CheckUser {
     private JDBCConnection jdbcTool;
 
     public CheckUser () {
-        this.jdbcTool = new JDBCConnection();
+        this.jdbcTool = JDBCConnection.getJDConnection();
     }
     /*
     * @raram 校验用户注册
