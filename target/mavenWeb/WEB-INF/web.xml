@@ -23,4 +23,13 @@
     <url-pattern>/regsiter</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>LightServlet</servlet-name>
+    <servlet-class>servlet.LightServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LightServlet</servlet-name>
+    <url-pattern>/light</url-pattern>
+  </servlet-mapping>
+
 </web-app>
