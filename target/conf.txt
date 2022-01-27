@@ -1,1 +1,1 @@
-{"yunxi":"0","yuanlan":"0","shangzhuang":"0","yizhou":"0","yixin":"0","erhuan":"0","alllight":"0"}
+{"yunxi":"0","yuanlan":"0","shangzhuang":"0","gongfa":"0","niaokan":"0","alllight":"1","left":"","right":""}

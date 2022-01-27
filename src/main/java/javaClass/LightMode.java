@@ -4,17 +4,42 @@ public class LightMode {
     private String yunxi = "";
     private String yuanlan = "";
     private String shangzhuang = "";
-    private String yizhou = "";
-    private String yixin = "";
-    private String erhuan = "";
+    private String gongfa = "";
+    private String niaokan = "";
     private String alllight = "";
+    private String left = "";
+    private String right = "";
 
-    public String getYizhou() {
-        return yizhou;
+    public String getGongfa() {
+        return gongfa;
     }
 
-    public void setYizhou(String yizhou) {
-        this.yizhou = yizhou;
+    public void setGongfa(String gongfa) {
+        this.gongfa = gongfa;
+    }
+
+    public String getNiaokan() {
+        return niaokan;
+    }
+
+    public void setNiaokan(String niaokan) {
+        this.niaokan = niaokan;
+    }
+
+    public String getLeft() {
+        return left;
+    }
+
+    public void setLeft(String left) {
+        this.left = left;
+    }
+
+    public String getRight() {
+        return right;
+    }
+
+    public void setRight(String right) {
+        this.right = right;
     }
 
     public String getYunxi() {
@@ -41,21 +66,6 @@ public class LightMode {
         this.shangzhuang = shangzhuang;
     }
 
-    public String getYixin() {
-        return yixin;
-    }
-
-    public void setYixin(String yixin) {
-        this.yixin = yixin;
-    }
-
-    public String getErhuan() {
-        return erhuan;
-    }
-
-    public void setErhuan(String erhuan) {
-        this.erhuan = erhuan;
-    }
 
     public String getAlllight() {
         return alllight;

@@ -28,8 +28,8 @@ public class LightServlet extends HttpServlet {
         Gson gson = new Gson();
         LightBody body = gson.fromJson(jsonString,LightBody.class);
         String btnTag = body.getBtnTag();
-        String path = "C:/xampp/tomcat/webapps/conf.txt";
-//        String path = "/Users/liufeilong/Desktop/ideaProtects/mavenWeb/target/conf.txt";
+//        String path = "C:/xampp/tomcat/webapps/conf.txt";
+        String path = "/Users/liufeilong/Desktop/ideaProtects/mavenWeb/target/conf.txt";
         LightMode lightMode = readTextJson(path);
 
         System.out.println(btnTag);
@@ -40,28 +40,15 @@ public class LightServlet extends HttpServlet {
         }else if (btnTag.equals("3")){
             lightMode.setShangzhuang(lightMode.getShangzhuang().equals("1") ? "0" : "1");
         }else if (btnTag.equals("4")){
-            lightMode.setYizhou(lightMode.getYizhou().equals("1") ? "0" : "1");
+            lightMode.setGongfa(lightMode.getGongfa().equals("1") ? "0" : "1");
         }else if (btnTag.equals("5")){
-            lightMode.setYixin(lightMode.getYixin().equals("1") ? "0" : "1");
-        }else if (btnTag.equals("6")){
-            lightMode.setErhuan(lightMode.getErhuan().equals("1") ? "0" : "1");
+            lightMode.setNiaokan(lightMode.getNiaokan().equals("1") ? "0" : "1");
         }else if (btnTag.equals("7")){
             lightMode.setAlllight(lightMode.getAlllight().equals("1") ? "0" : "1");
-            if (lightMode.getAlllight().equals("1")) {
-                lightMode.setYunxi("1");
-                lightMode.setYuanlan("1");
-                lightMode.setShangzhuang("1");
-                lightMode.setYizhou("1");
-                lightMode.setYixin("1");
-                lightMode.setErhuan("1");
-            }else  {
-                lightMode.setYunxi("0");
-                lightMode.setYuanlan("0");
-                lightMode.setShangzhuang("0");
-                lightMode.setYizhou("0");
-                lightMode.setYixin("0");
-                lightMode.setErhuan("0");
-            }
+        }else if (btnTag.equals("8")) {
+            lightMode.setLeft("1");
+        }else if (btnTag.equals("9")) {
+            lightMode.setRight("1");
         }
 
 
